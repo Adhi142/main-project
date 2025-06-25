@@ -25,8 +25,8 @@ public class ManageCategorySearchTest extends Base {
 		loginpageproject.enterUserNamePassword(username, password);
 		String categoryfield = ExcelUtilities.getStringdata(1, 0, "Managecategorysearch");
 		home = loginpageproject.clickOnSigninButton();
-		category = home.clickOnManageCategoryButton();
-		search = category.clickSearchButton();
+		category = home.clickManageCategory();
+		search = category.finalsearchbutton();
 		search.inputCategoryField(categoryfield).finalsearchbutton();
 		boolean isList = search.isListDisplayed();
 		Assert.assertTrue(isList, Constants.ISLIST);

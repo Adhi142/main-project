@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T11:47:12 IST" name="paralleltesting" finished-at="2025-06-20T11:47:29 IST" duration-ms="17864">
+  <suite started-at="2025-06-24T12:34:38 IST" name="Suite" finished-at="2025-06-24T12:34:44 IST" duration-ms="5715">
     <groups>
+      <group name="smoketesting">
+        <method signature="LoginTest.loginWithInvalidUsernameAndValidPassword()[pri:0, instance:MainPackage.LoginTest@175c2241]" name="loginWithInvalidUsernameAndValidPassword" class="MainPackage.LoginTest"/>
+      </group> <!-- smoketesting -->
     </groups>
-    <test started-at="2025-06-20T11:47:12 IST" name="chrometest" finished-at="2025-06-20T11:47:29 IST" duration-ms="17864">
-      <class name="MainPackage.ManageCategoryTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainPackage.ManageCategoryTest@44c03695]" started-at="2025-06-20T11:47:12 IST" name="beforeMethod" finished-at="2025-06-20T11:47:18 IST" duration-ms="5994" status="PASS">
+    <test started-at="2025-06-24T12:34:38 IST" name="grouping" finished-at="2025-06-24T12:34:44 IST" duration-ms="5715">
+      <class name="MainPackage.LoginTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainPackage.LoginTest@175c2241]" started-at="2025-06-24T12:34:38 IST" name="beforeMethod" finished-at="2025-06-24T12:34:43 IST" duration-ms="4621" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,50 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testAddCategoryWithDiscount()[pri:0, instance:MainPackage.ManageCategoryTest@44c03695]" started-at="2025-06-20T11:47:18 IST" name="testAddCategoryWithDiscount" finished-at="2025-06-20T11:47:29 IST" duration-ms="11074" status="PASS">
+        <test-method signature="loginWithInvalidUsernameAndValidPassword()[pri:0, instance:MainPackage.LoginTest@175c2241]" started-at="2025-06-24T12:34:43 IST" name="loginWithInvalidUsernameAndValidPassword" finished-at="2025-06-24T12:34:43 IST" duration-ms="613" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddCategoryWithDiscount -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:MainPackage.ManageCategoryTest@44c03695]" started-at="2025-06-20T11:47:29 IST" name="afterMethod" finished-at="2025-06-20T11:47:29 IST" duration-ms="652" status="PASS">
+        </test-method> <!-- loginWithInvalidUsernameAndValidPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:MainPackage.LoginTest@175c2241]" started-at="2025-06-24T12:34:43 IST" name="afterMethod" finished-at="2025-06-24T12:34:44 IST" duration-ms="374" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddCategoryWithDiscount status=SUCCESS method=ManageCategoryTest.testAddCategoryWithDiscount()[pri:0, instance:MainPackage.ManageCategoryTest@44c03695] output={null}]]]>
+                <![CDATA[[TestResult name=loginWithInvalidUsernameAndValidPassword status=SUCCESS method=LoginTest.loginWithInvalidUsernameAndValidPassword()[pri:0, instance:MainPackage.LoginTest@175c2241] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- MainPackage.ManageCategoryTest -->
-      <class name="MainPackage.AdminUsersTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainPackage.AdminUsersTest@77888435]" started-at="2025-06-20T11:47:12 IST" name="beforeMethod" finished-at="2025-06-20T11:47:18 IST" duration-ms="6048" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="adminuser()[pri:0, instance:MainPackage.AdminUsersTest@77888435]" started-at="2025-06-20T11:47:18 IST" name="adminuser" finished-at="2025-06-20T11:47:23 IST" duration-ms="5198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminuser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:MainPackage.AdminUsersTest@77888435]" started-at="2025-06-20T11:47:23 IST" name="afterMethod" finished-at="2025-06-20T11:47:24 IST" duration-ms="530" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=adminuser status=SUCCESS method=AdminUsersTest.adminuser()[pri:0, instance:MainPackage.AdminUsersTest@77888435] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- MainPackage.AdminUsersTest -->
-    </test> <!-- chrometest -->
-  </suite> <!-- paralleltesting -->
+      </class> <!-- MainPackage.LoginTest -->
+    </test> <!-- grouping -->
+  </suite> <!-- Suite -->
 </testng-results>

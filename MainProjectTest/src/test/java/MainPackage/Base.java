@@ -25,8 +25,8 @@ public class Base {
 	WebDriver driver;
 	public Properties properties;
 	public FileInputStream fis;
-  @BeforeMethod()
-  @Parameters("browser")
+	@Parameters("browser")
+  @BeforeMethod(alwaysRun = true)
   public void beforeMethod(String browzer) throws Exception {
 	  try {
 			properties = new Properties();
@@ -53,7 +53,7 @@ public class Base {
 		  }
   
 
-  @AfterMethod
+  @AfterMethod(alwaysRun = true)
   public void afterMethod(ITestResult itResult) throws IOException
   {
 	  if (itResult.getStatus() == ITestResult.FAILURE) {

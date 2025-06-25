@@ -17,7 +17,7 @@ import utilities.ExcelUtilities;
 public class LoginTest extends Base {
 	HomePage home;
 
-    @Test(retryAnalyzer = retry.Retry.class)
+    @Test(retryAnalyzer = retry.Retry.class,groups = {"REGRESSION"})
     public void loginWithinCorrectCredentials() throws IOException {
         LoginPage loginPage = new LoginPage(driver);
         String username=ExcelUtilities.getStringdata(1, 0, "Loginpagetest");
@@ -34,7 +34,7 @@ public class LoginTest extends Base {
      
 
    
-    @Test
+    @Test(groups = {"smoketesting"})
     public void loginWithInvalidUsernameAndValidPassword() {
         LoginPage loginPage = new LoginPage(driver);
         
@@ -42,7 +42,7 @@ public class LoginTest extends Base {
         loginPage.clickOnSigninButton();
     }
 
-    @Test
+    @Test (groups = {"regression testing"})
     @Parameters({"username", "password"})
     public void loginWithParameters(String username, String password) {
         LoginPage loginPage = new LoginPage(driver);

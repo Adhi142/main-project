@@ -5,34 +5,30 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ManageCategorySearch {
-	 WebDriver driver;
+public class ManageCategorySearch 
+{
+public WebDriver driver;
+public ManageCategorySearch(WebDriver driver)
+{
+	this.driver=driver;
+	PageFactory.initElements(driver,this);
+}
 
-	    public ManageCategorySearch(WebDriver driver) {
-	        this.driver = driver;
-	        PageFactory.initElements(driver, this);
-	    }
-	    @FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']") WebElement newSearch;
-	    @FindBy(xpath="//input[@class='form-control']") WebElement inputCategory;
-	    @FindBy(xpath = "//button[@class='btn btn-danger btn-fix']")WebElement  searchButton;
-	    
-public ManageCategorySearch newSearch()
+@FindBy(xpath="//input[@class='form-control']")WebElement categoryfield;
+@FindBy(xpath="//button[@name='Search']")WebElement finalsearchbutton;
+@FindBy(xpath="(//div[@class='card-header'])[2]")WebElement listcategories;
+public ManageCategorySearch inputCategoryField(String categoryfield1)
 {
-	newSearch.click();
+	categoryfield.sendKeys(categoryfield1);
 	return this;
 }
-public ManageCategorySearch inputCategory()
+public ManageCategorySearch finalsearchbutton()
 {
-	inputCategory.click();
+	finalsearchbutton.click();
 	return this;
 }
-public ManageCategorySearch searchButton()
+public boolean isListDisplayed()
 {
-	searchButton.click();
-	return.this;
+	return listcategories.isDisplayed();
 }
-public boolean issearchable()
-{
-	return message 
-	}
 }
